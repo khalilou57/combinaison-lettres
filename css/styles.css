@@ -1,0 +1,36 @@
+#container{
+    max-width: 800px;
+    width: 80%;
+    text-align: center;
+}
+.paire{
+    background-color: rgb(167, 206, 243);
+}
+
+.impaire{
+    background-color: rgb(84, 160, 231);
+}
+
+.error{
+    color: red;
+}
+
+#form-checkbox{
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-flow: column;
+    flex-direction: row;
+}
+
+.form-flex-row{
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-flow: column;
+    flex-direction: row;
+}
+
+table{
+    position: relative;
+    left: 29%;;
+    width: 50%;
+}
