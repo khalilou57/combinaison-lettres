@@ -1,0 +1,17 @@
+{
+    "name": "scrummer/combinaison",
+    "description": "excercice génération de toutes les combinaisons possibles à partir d'un choix de lettres",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "authors": [
+        {
+            "name": "Ibrahima Mignane Diouf",
+            "email": "ibrahima.mdiouf@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
+}

@@ -1,4 +1,5 @@
 <?php
+
 function getListCombinaisons($inputList) :array{
 $inputListString = implode(" ", $inputList);
 //print_r($inputList);

@@ -1,3 +1,7 @@
+<?php 
+require_once("../vendor/autoload.php");
+use App\Controller\Combinaison as Combinaison;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="public/assets/css/styles.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -14,9 +18,9 @@
 <body>
     <div id="container" class="container">
     <?php 
-                require_once("utils_v1.inc");
+                //require_once("src/Utils/utils_v1.inc");
 
-                $listCombinaisons = listCombinaisonsAlex();
+                $listCombinaisons = Combinaison::listCombinaisonsAlex();
                 ?>
             <h1><?php echo count($listCombinaisons)?> Combinaisons possibles avec les 4 lettres A L E X</h1>
             <a class="btn btn-info" href="#" id="toggle_div1"><i></i>Voir</a>
@@ -87,8 +91,8 @@
  if(count($listCheckbox) < 2){
 echo '<div class="error">Veuillez choisir au moins 2 lettres</div>';
  }else{
-     require_once('utils_v3.inc');
-     $listCombinaisons = getListCombinaisons($listCheckbox);
+    // require_once('src/Utils/utils_v3.inc');
+     $listCombinaisons = Combinaison::getListCombinaisons($listCheckbox);
      if(count($listCombinaisons) !=0){
 if(count($listCombinaisons) == 1){
 echo "<div class='error'>".$listCombinaisons['erreur']."</div>";
@@ -108,7 +112,7 @@ echo '<table><div id="caption"class="shadow-lg p-3 mb-5 bg-white rounded">Pour l
                 ?>
             </div>
     </div>
-    <script type="text/javascript" src="js/combinaison.js"></script>
+    <script type="text/javascript" src="public/assets/js/combinaison.js"></script>
 </body>
 </html>
 
